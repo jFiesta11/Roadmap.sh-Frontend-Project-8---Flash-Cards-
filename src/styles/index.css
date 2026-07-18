@@ -1,0 +1,12 @@
+:root{
+    --bg-color: #F5F1ED;
+    --dark-color: #252323;
+    --shadows-color: #70798C;
+    --text-font: "Margarine", 'sans-serif';
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+
