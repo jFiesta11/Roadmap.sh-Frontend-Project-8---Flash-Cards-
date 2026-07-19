@@ -9,4 +9,10 @@
     box-sizing: border-box;
     margin: 0;
 }
-
+h1,h2,h3{
+    font-family: "Margarine", 'sans-serif';
+}
+p{
+    font-family: "Indie Flower", cursive;
+    font-weight: 1000;
+}

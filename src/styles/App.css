@@ -1,3 +1,57 @@
-h1{
-    font-family: var(--text-font) ;
+@import url(./index.css);
+body{
+    background-color: var(--light-color);
+    height: 100vh;
+}
+.content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh;
+    gap: 15px;
+}
+/* CONTENT */
+
+.card-progressBar{
+    border-radius: 8px;
+    border: 1px solid var(--dark-color);
+    height: 100px;
+    width: 800px;
+}
+.card{
+    border-radius: 8px;
+    border: 2px solid var(--dark-color);
+    height: 500px;
+    width: 800px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-container{
+    border: 1px solid var(--dark-color);
+    border-radius: 8px;
+    height: 100px;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-btn{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1.5px solid var(--dark-color);
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    p{
+        font-size: 1.2rem;
+    }
 }
