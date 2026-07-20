@@ -35,8 +35,8 @@ body{
     display: flex;
     height: 100%;
     width: 100%;
-    background-color: var(--shadow-color);
     border-radius: inherit;
+    background-color: var(--mute-dark-color);
     box-shadow: inset 5px 5px 20px var(--dark-color);
 }
 .card-progressBar{
