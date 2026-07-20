@@ -1,9 +1,11 @@
-function Card({front, back}){
+import { useState } from "react";
+
+function Card({click,front, back, showAnswer}){
 return(
-    <div className="card">
-        <h1>TITLE</h1>
-        <p>Question</p>
-        <p>Answer</p>
+    <div onClick={click} className={showAnswer ? "card" :  "card flip"}>
+        {showAnswer && <div className="frontFace"><p>{front}</p></div>}
+
+        {!showAnswer && <div className="backFace"><h1>{back}</h1></div>}
     </div>    
 )
 }
