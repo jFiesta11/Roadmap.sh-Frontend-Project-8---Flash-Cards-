@@ -5,7 +5,7 @@ import Button from "./Button";
 import Statusbar from "./Statusbar";
 import Card from "./Card";
 // hook
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 
 function shuffleArray(array) {
     const arr = [...array]; 
@@ -17,10 +17,10 @@ function shuffleArray(array) {
     }
   return arr;
 }
-
 const flashcards = card.questions
 
 function Parent(){
+
     const [index, setIndex] = useState(0);
     
     const [flipCard, setFlipCard] = useState(true)
@@ -44,6 +44,21 @@ function Parent(){
                         setIndex(0)
     }           
     
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "ArrowRight") next();
+            if (e.key === "ArrowLeft") previous();
+            if (e.key === " "){  
+                e.preventDefault() 
+                flip()
+            }
+            if(e.key === 's') shuffle()
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, []);
+
 
 return (
     <>

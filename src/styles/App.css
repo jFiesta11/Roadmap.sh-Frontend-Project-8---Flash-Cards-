@@ -4,6 +4,7 @@ body{
     height: 100vh;
 }
 .content-container{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,6 +12,20 @@ body{
     padding: 20px;
     height: 100vh;
     gap: 20px;
+    
+    &::after{
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        content: "← : Previous\A→ : Next\ASpacebar : Flip\AS : Shuffle";
+        white-space: pre;
+        inset: 0;
+        font-family: var(--text-font);
+        margin: 20px;
+        color: var(--dark-color);
+        opacity: .5;
+        font-size: .9rem;
+    }
 }
 /* CONTENT */
 .card-item-count{
@@ -98,7 +113,7 @@ body{
     align-items: center;
     color: var(--dark-color);
     display: flex;
-    height: 90%;
+    height: 85%;
     width: 90%;
     border: .1px dashed var(--mute-border-color);
     border-radius: 15px;
@@ -143,12 +158,15 @@ body{
     &:nth-child(1){border-radius: 30px 15px 15px 30px;}
     &:nth-child(2){border-radius: 25px}
     &:nth-child(3){border-radius: 15px 30px 30px 15px;}
-    &:nth-child(4){ position: absolute; transform: translate(-50%, -50%); left: 50%; top: 150px; height: 0px; width: 0px; padding: 25px 60px; border-radius: 20px;}
+    &:nth-child(4){ position: absolute; transform: translate(-50%, -50%); left: 50%; top: 150px; height: 0px; width: 0px; padding: 20px 60px; border-radius: 15px; color: var(--mute-border-color); border-color: var(--mute-border-color); }
     
     p{
         font-size: 1.5rem;
         font-weight: 1000;
         text-align: center;
+    }
+    &:hover{
+        box-shadow: 5px 5px var(--mute-border-color);
     }
     &:active{
         background-color: var(--button-active);
