@@ -17,7 +17,7 @@
 
 ```bash
    git clone https://github.com/jFiesta11/Roadmap.sh-Frontend-Project-8---Flash-Cards-
-   cd https://github.com/jFiesta11/Roadmap.sh-Frontend-Project-8---Flash-Cards-
+   cd Roadmap.sh-Frontend-Project-8---Flash-Cards-
 ```
 
 2. Install dependencies
